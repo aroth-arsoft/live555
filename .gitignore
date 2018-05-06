@@ -25,3 +25,9 @@ mediaServer/Makefile
 mediaServer/cmake_install.cmake
 mediaServer/libmediaServer.so
 mediaServer/CMakeFiles/
+Makefile
+CMakeCache.txt
+liblive555.so
+cmake_install.cmake
+CMakeFiles/
+testProgs/openRTSP

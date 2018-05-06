@@ -1,1 +1,6 @@
 .DS_Store
+liveMedia/Makefile
+liveMedia/cmake_install.cmake
+liveMedia/libliveMedia.so
+liveMedia/CMakeFiles/
+liveMedia/CMakeCache.txt

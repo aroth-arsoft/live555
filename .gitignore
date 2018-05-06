@@ -13,3 +13,7 @@ BasicUsageEnvironment/Makefile
 BasicUsageEnvironment/cmake_install.cmake
 BasicUsageEnvironment/libbasicUsageEnvironment.so
 BasicUsageEnvironment/CMakeFiles/
+UsageEnvironment/Makefile
+UsageEnvironment/cmake_install.cmake
+UsageEnvironment/libusageEnvironment.so
+UsageEnvironment/CMakeFiles/

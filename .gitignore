@@ -9,3 +9,7 @@ groupsock/cmake_install.cmake
 groupsock/CMakeFiles/
 groupsock/Makefile
 groupsock/CMakeCache.txt
+BasicUsageEnvironment/Makefile
+BasicUsageEnvironment/cmake_install.cmake
+BasicUsageEnvironment/libbasicUsageEnvironment.so
+BasicUsageEnvironment/CMakeFiles/

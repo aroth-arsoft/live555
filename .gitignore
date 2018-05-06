@@ -21,3 +21,7 @@ proxyServer/Makefile
 proxyServer/cmake_install.cmake
 proxyServer/libproxyServer.so
 proxyServer/CMakeFiles/
+mediaServer/Makefile
+mediaServer/cmake_install.cmake
+mediaServer/libmediaServer.so
+mediaServer/CMakeFiles/

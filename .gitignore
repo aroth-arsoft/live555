@@ -17,3 +17,7 @@ UsageEnvironment/Makefile
 UsageEnvironment/cmake_install.cmake
 UsageEnvironment/libusageEnvironment.so
 UsageEnvironment/CMakeFiles/
+proxyServer/Makefile
+proxyServer/cmake_install.cmake
+proxyServer/libproxyServer.so
+proxyServer/CMakeFiles/

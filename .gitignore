@@ -4,3 +4,8 @@ liveMedia/cmake_install.cmake
 liveMedia/libliveMedia.so
 liveMedia/CMakeFiles/
 liveMedia/CMakeCache.txt
+groupsock/libgroupsock.so
+groupsock/cmake_install.cmake
+groupsock/CMakeFiles/
+groupsock/Makefile
+groupsock/CMakeCache.txt

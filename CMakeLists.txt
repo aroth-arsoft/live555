@@ -32,8 +32,8 @@ add_library(live555 SHARED ${SOURCES})
 #LD_LIBRARY_PATH=../ ./openRTSP
 
 if(WIN32)
-    target_link_libraries(liveMedia PRIVATE ws2_32.lib)
+    target_link_libraries(live555 PRIVATE ws2_32.lib)
 endif()
 
-install(TARGETS liveMedia
+install(TARGETS live555
         RUNTIME DESTINATION bin)

@@ -21,7 +21,7 @@ file(GLOB SOURCES "groupsock/*.cpp" "groupsock/*.c"
                   "liveMedia/*.cpp" "liveMedia/*.c"
                   "BasicUsageEnvironment/*.cpp" "BasicUsageEnvironment/*.c"
                   "UsageEnvironment/*.cpp" "UsageEnvironment/*.c"
-                  "mediaServer/*.cpp" "mediaServer/*.c"
+                  #"mediaServer/*.cpp" "mediaServer/*.c"
 ) #"proxyServer/*.cpp" "proxyServer/*.c"
 
 add_definitions(-DXLOCALE_NOT_USED)
@@ -37,3 +37,5 @@ endif()
 
 install(TARGETS live555
         RUNTIME DESTINATION bin)
+
+add_subdirectory(mediaServer)

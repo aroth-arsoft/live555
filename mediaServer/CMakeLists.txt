@@ -1,10 +1,3 @@
-cmake_minimum_required(VERSION 2.8)
-
-project(mediaServer)
-
-SET(GCC_COVERAGE_COMPILE_FLAGS "-fpermissive") #Why is this needed?
-add_definitions(${GCC_COVERAGE_COMPILE_FLAGS})
-
 include_directories(../BasicUsageEnvironment/include)
 include_directories(../UsageEnvironment/include)
 include_directories(../liveMedia/include)
@@ -14,4 +7,13 @@ include_directories(../groupsock/include)
 
 file(GLOB SOURCES "*.cpp" "*.c") 
 
-add_library(mediaServer SHARED ${SOURCES})
+add_executable(mediaServer ${SOURCES})
+
+#g++ openRTSP.cpp playCommon.cpp -I . -I ../liveMedia/include -I ../liveMedia -I ../groupsock/include -I ../UsageEnvironment/include -I ../BasicUsageEnvironment/include ../liblive555.so -o openRTSP
+#LD_LIBRARY_PATH=../ ./openRTSP
+
+target_link_libraries(mediaServer PRIVATE live555)
+
+install(TARGETS mediaServer
+        RUNTIME DESTINATION bin)
+

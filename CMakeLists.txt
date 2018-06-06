@@ -2,8 +2,12 @@ cmake_minimum_required(VERSION 2.8)
 
 project(live555)
 
-SET(GCC_COVERAGE_COMPILE_FLAGS "-fpermissive") #Why is this needed?
-add_definitions(${GCC_COVERAGE_COMPILE_FLAGS})
+if(MSVC)
+    add_definitions(-D_WINSOCK_DEPRECATED_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS)
+else()
+    SET(GCC_COVERAGE_COMPILE_FLAGS "-fpermissive") #Why is this needed?
+    add_definitions(${GCC_COVERAGE_COMPILE_FLAGS})
+endif()
 
 include_directories(BasicUsageEnvironment/include)
 include_directories(UsageEnvironment/include)
@@ -26,3 +30,10 @@ add_library(live555 SHARED ${SOURCES})
 
 #g++ openRTSP.cpp playCommon.cpp -I . -I ../liveMedia/include -I ../liveMedia -I ../groupsock/include -I ../UsageEnvironment/include -I ../BasicUsageEnvironment/include ../liblive555.so -o openRTSP
 #LD_LIBRARY_PATH=../ ./openRTSP
+
+if(WIN32)
+    target_link_libraries(liveMedia PRIVATE ws2_32.lib)
+endif()
+
+install(TARGETS liveMedia
+        RUNTIME DESTINATION bin)

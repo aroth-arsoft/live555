@@ -36,6 +36,7 @@ if(WIN32)
 endif()
 
 install(TARGETS live555
-        RUNTIME DESTINATION bin)
+        RUNTIME DESTINATION bin
+        ARCHIVE DESTINATION lib)
 
 add_subdirectory(mediaServer)

@@ -16,3 +16,7 @@ add_definitions(-DXLOCALE_NOT_USED)
 file(GLOB SOURCES "*.cpp" "*.c") 
 
 add_library(liveMedia SHARED ${SOURCES})
+
+if(WIN32)
+    target_link_libraries(liveMedia ws2_32.lib)
+endif()

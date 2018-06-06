@@ -26,7 +26,7 @@ file(GLOB SOURCES "groupsock/*.cpp" "groupsock/*.c"
 
 add_definitions(-DXLOCALE_NOT_USED)
 
-add_library(live555 SHARED ${SOURCES})
+add_library(live555 STATIC ${SOURCES})
 
 #g++ openRTSP.cpp playCommon.cpp -I . -I ../liveMedia/include -I ../liveMedia -I ../groupsock/include -I ../UsageEnvironment/include -I ../BasicUsageEnvironment/include ../liblive555.so -o openRTSP
 #LD_LIBRARY_PATH=../ ./openRTSP
